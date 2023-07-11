@@ -1,0 +1,101 @@
+.username-container {
+  position: relative;
+  /* background-color: #e8ebee12;  */
+  width: 800px;
+  margin: auto; 
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #379AC1;
+  font-family: Arial, sans-serif;  
+  background: url('./../../images/background.jpg') 0 0 no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+input[type=text], input[type=url], input[type=email] {
+  width: 80%;
+  padding: 12px 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 5px solid #379AC1; 
+  border-radius: 4px;
+  background-color: transparent; 
+  color: #379AC1;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+input[type=text]:focus {
+  box-shadow: 0 0 5px 5px #718096; 
+}
+
+input[type=text]:focus::after {
+  content: "";
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: linear-gradient(to right, transparent, transparent);
+  z-index: -1;
+  animation: gradient 6s infinite;
+}
+
+
+
+@keyframes background-shine {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+
+.button-92 {
+  --c: #fff;
+  /* text color */
+  background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p,100%)/300% no-repeat,
+    #004dff;
+  /* background color */
+  color: #0000;
+  border: none;
+  transform: perspective(500px) rotateY(calc(20deg*var(--_i,-1)));
+  text-shadow: calc(var(--_i,-1)* 0.08em) -.01em 0   var(--c),
+    calc(var(--_i,-1)*-0.08em)  .01em 2px #0004;
+  outline-offset: .1em;
+  transition: 0.3s;
+}
+
+.button-92:hover,
+.button-92:focus-visible {
+  --_p: 0%;
+  --_i: 1;
+}
+
+.button-92:active {
+  text-shadow: none;
+  color: var(--c);
+  box-shadow: inset 0 0 9e9q #0005;
+  transition: 0s;
+}
+
+.button-92 {
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 0;
+  cursor: pointer;
+  padding: .1em .3em;
+}
+.text-shine {
+  display: inline-flex;
+  background-image: linear-gradient(110deg, #f8f5f5, 45%, #1e293b, 55%, #379AC1);
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text; 
+  color: transparent;
+  font-size: 1.25rem; 
+  animation: background-shine 15s linear infinite;
+}
